@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cricket Academy Application Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Cricket Academy Application Form</h1>
+    <form action="ApplicationServlet" method="post" enctype="multipart/form-data">
+      
+      <h2>1. Personal Details</h2>
+      <label>Full Name:</label><input type="text" name="fullname" required><br>
+      <label>Date of Birth:</label><input type="date" name="dob" required><br>
+      <label>Age:</label><input type="number" name="age" required><br>
+      <label>Gender:</label>
+      <select name="gender" required>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select><br>
+      <label>Address:</label><textarea name="address" required></textarea><br>
+      <label>Contact Number:</label><input type="tel" name="contact" required><br>
+      <label>Email:</label><input type="email" name="email" required><br>
+
+      <h2>2. Parent/Guardian Details (for minors)</h2>
+      <label>Parent/Guardian Name:</label><input type="text" name="parentName"><br>
+      <label>Relationship:</label><input type="text" name="relationship"><br>
+      <label>Parent Contact:</label><input type="tel" name="parentContact"><br>
+
+      <h2>3. Cricket Background</h2>
+      <label>Previous Experience:</label>
+      <select name="experience">
+        <option>No</option>
+        <option>Yes</option>
+      </select><br>
+      <label>If Yes, Mention Club/School/Academy:</label>
+      <input type="text" name="clubName"><br>
+      <label>Preferred Playing Role:</label>
+      <select name="role">
+        <option>Batsman</option>
+        <option>Bowler</option>
+        <option>All-Rounder</option>
+        <option>Wicketkeeper</option>
+      </select><br>
+      <label>Batting Style:</label>
+      <select name="battingStyle">
+        <option>Right-hand</option>
+        <option>Left-hand</option>
+      </select><br>
+      <label>Bowling Style:</label>
+      <select name="bowlingStyle">
+        <option>Pace</option>
+        <option>Spin</option>
+        <option>Other</option>
+      </select><br>
+
+      <h2>4. Medical & Fitness Info</h2>
+      <label>Medical Condition / Injury History:</label><input type="text" name="medical"><br>
+      <label>Emergency Contact:</label><input type="tel" name="emergencyContact" required><br>
+
+      <h2>5. Documents Upload</h2>
+      <label>Upload Photo:</label><input type="file" name="photo" accept="image/*" required><br>
+      <label>Upload Age Proof:</label><input type="file" name="ageProof" required><br>
+
+      <h2>6. Declaration</h2>
+      <p>I hereby declare that the information provided above is true to the best of my knowledge. 
+      I agree to abide by the rules and regulations of the Cricket Academy.</p>
+      <label>Applicant Signature:</label><input type="text" name="applicantSign" required><br>
+      <label>Date:</label><input type="date" name="date" required><br>
+      <label>Parent/Guardian Signature (if under 18):</label>
+      <input type="text" name="guardianSign"><br>
+
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+</body>
+</html>
